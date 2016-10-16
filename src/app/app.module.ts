@@ -44,5 +44,5 @@ import { HeroDetailModule } from './heroDetail/hero-detail.module'
 
   bootstrap: [ AppComponent ]
 })
-  
+
 export class AppModule {}
