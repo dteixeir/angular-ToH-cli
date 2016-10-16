@@ -10,12 +10,9 @@ import { HttpModule }     from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from '../in-memory-data.service';
 
-
 // Internal Components
 import { HeroDetailComponent }  from './hero-detail.component';
 import { HeroService }          from '../hero.service';
-
-
 
 @NgModule({
   imports: [
@@ -37,5 +34,5 @@ import { HeroService }          from '../hero.service';
     HeroService
   ]
 })
-  
+
 export class HeroDetailModule {}

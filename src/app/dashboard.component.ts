@@ -5,16 +5,13 @@ import { Router } from '@angular/router';
 import { Hero }             from './hero';
 
 // Internal Modules
-import { HeroDetailModule } from './heroDetail/hero-detail.module'
+// import { HeroDetailModule } from './heroDetail/hero-detail.module';
 
 // Service Imports
 import { HeroService }      from './hero.service';
 
-
-
-
 @Component({
-  selector: 'my-dashboard',
+  selector: 'app-dashboard',
   templateUrl: 'dashboard.component.html',
   styleUrls: ['dashboard.component.css']
 })

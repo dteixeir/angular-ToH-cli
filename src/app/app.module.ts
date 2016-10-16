@@ -19,7 +19,7 @@ import { DashboardComponent }   from './dashboard.component';
 import { HeroSearchComponent }  from './hero-search.component';
 
 // Internal Modules
-import { HeroDetailModule } from './heroDetail/hero-detail.module'
+import { HeroDetailModule } from './heroDetail/hero-detail.module';
 
 @NgModule({
   imports: [
