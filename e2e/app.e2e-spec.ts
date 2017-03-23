@@ -1,14 +1,14 @@
-import { ReposPage } from './app.po';
+import { TestApp2Page } from './app.po';
 
-describe('ToH App', function() {
-  let page: ReposPage;
+describe('test-app2 App', () => {
+  let page: TestApp2Page;
 
   beforeEach(() => {
-    page = new ReposPage();
+    page = new TestApp2Page();
   });
 
-  it('should display message saying Tour of Heroes', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Tour of Heroes');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });

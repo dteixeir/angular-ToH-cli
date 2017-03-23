@@ -1,25 +1,17 @@
-import './rxjs-extensions';
+import { NgModule }             from '@angular/core';
+import { BrowserModule }        from '@angular/platform-browser';
+import { FormsModule }          from '@angular/forms';
+import { HttpModule }           from '@angular/http';
+import { AppRoutingModule }     from './app-routing.module';
+import { AppComponent }         from './app-component/app.component';
+import { DashboardComponent }   from './dashboard/dashboard.component';
+import { HeroesComponent }      from './heroes/heroes.component';
+import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
+import { HeroService }          from './services/hero.service';
 
-// 3rd Party
-import { NgModule }       from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
-import { FormsModule }    from '@angular/forms';
-import { HttpModule }     from '@angular/http';
-
-// Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
-
-// Internal Components
-import { AppComponent }         from './app.component';
-import { HeroesComponent }      from './heroes.component';
-import { HeroService }          from './hero.service';
-import { routing }              from './app.routing';
-import { DashboardComponent }   from './dashboard.component';
-import { HeroSearchComponent }  from './hero-search.component';
-
-// Internal Modules
-import { HeroDetailModule } from './heroDetail/hero-detail.module';
+import { InMemoryDataService }  from './services/in-memory-data.service';
+import { HeroSearchComponent }  from './hero-search/hero-search.component';
 
 @NgModule({
   imports: [
@@ -27,22 +19,18 @@ import { HeroDetailModule } from './heroDetail/hero-detail.module';
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    routing,
-    HeroDetailModule
+    AppRoutingModule
   ],
-
   declarations: [
     AppComponent,
     DashboardComponent,
+    HeroDetailComponent,
     HeroesComponent,
     HeroSearchComponent
   ],
-
-  providers: [
-    HeroService
-  ],
-
+  providers: [ HeroService ],
   bootstrap: [ AppComponent ]
 })
+export class AppModule { }
 
-export class AppModule {}
+
